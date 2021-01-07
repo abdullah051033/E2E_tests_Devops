@@ -32,34 +32,33 @@ public class BrowserFactory {
 		DesiredCapabilities caps = null;
 		if(browser.equalsIgnoreCase("chrome")){
 			
-//			System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\Desktop\\Tutorials\\Drivers\\chromedriver.exe");
-//			webDriver.set(new ChromeDriver());
+			System.setProperty("webdriver.chrome.driver", "D:\\Veggies_Devops\\E2E_tests_Devops\\drivers\\chromedriver.exe");
+			webDriver.set(new ChromeDriver());
 			ChromeOptions options = new ChromeOptions();
 //		    options.addArguments("--start-maximized");
 //		    options.addArguments("--disable-infobars");
-		DesiredCapabilities dc = DesiredCapabilities.chrome();
-		    dc.setCapability(ChromeOptions.CAPABILITY, options);
-		webDriver.set( new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),dc));
+//		DesiredCapabilities dc = DesiredCapabilities.chrome();
+//		    dc.setCapability(ChromeOptions.CAPABILITY, options);
+//		webDriver.set( new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),dc));
 
 			
 		}
 		else if(browser.equalsIgnoreCase("IE")){
-//			 System.setProperty("webdriver.ie.driver", "C:\\Users\\Dell\\Desktop\\Tutorials\\Drivers\\IEDriverServer.exe");
-//			 webDriver.set(new InternetExplorerDriver());
-			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
-		    capabilities.setCapability("requireWindowFocus", true);
-		    capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
-		    webDriver.set(new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),capabilities));
+			 System.setProperty("webdriver.ie.driver", "D:\\Veggies_Devops\\E2E_tests_Devops\\drivers\\IEDriverServer.exe");
+			 webDriver.set(new InternetExplorerDriver());
+//			DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
+//		    capabilities.setCapability("requireWindowFocus", true);
+//		    capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+//		    webDriver.set(new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),capabilities));
 
 			
 		}
 		else if(browser.equalsIgnoreCase("FF")){
-//			System.setProperty("webdriver.gecko.driver", "C:\\Users\\Dell\\Desktop\\Tutorials\\Drivers\\geckodriver.exe");
-//			 webDriver.set(new FirefoxDriver());
+			System.setProperty("webdriver.gecko.driver", "D:\\Veggies_Devops\\E2E_tests_Devops\\drivers\\geckodriver.exe");
+			 webDriver.set(new FirefoxDriver());
 			 
-			DesiredCapabilities capabilities = DesiredCapabilities.firefox(); 
-			 
-			 webDriver.set(new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),capabilities));
+//			DesiredCapabilities capabilities = DesiredCapabilities.firefox(); 
+//    		webDriver.set(new RemoteWebDriver(new URL("http://192.168.26.1:4444/wd/hub"),capabilities));
 		}
 	}
 
